@@ -1,5 +1,14 @@
-addEventListener("DOMContentLoaded", async(e)=>{
-    let peticion = await fetch("https://comfenalcocursos.000webhostapp.com/Operadores_07_10_2022/api.php");
-    let datos = await peticion.text();
-    document.querySelector("pre").innerHTML = datos;
+addEventListener("DOMContentLoaded", (e)=>{
+    let form = document.querySelector("#MyData");
+    form.addEventListener("submit", async(e)=>{
+        e.preventDefault();
+        let json = JSON.stringify(Object.fromEntries(new FormData(e.target)));
+        let config = {
+            method: form.method,
+            body: json
+        };
+        let peticion = await fetch(form.action, config);
+        let data = await peticion.text();
+        document.querySelector("pre").innerHTML = data;
+    })
 })

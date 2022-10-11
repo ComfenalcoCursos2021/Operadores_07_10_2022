@@ -1,10 +1,18 @@
 body{
     background: #121212;
 }
-h1{
-    color: #f0f2f4;
+label{
+    color: white;
+}
+input{
+    display: block;
+}
+input[type="submit"]{
+    margin-top: 10px;
+    cursor: pointer;
 }
 pre{
+    margin-top: 10px;
     border-radius: 5px;
     border: 2px solid #f0f2f4;
     background: #f8f8f8;
