@@ -4,10 +4,11 @@ body{
 label{
     color: white;
 }
-input{
+form label:nth-of-type(3n+1){
     display: block;
 }
 input[type="submit"]{
+    display: block;
     margin-top: 10px;
     cursor: pointer;
 }

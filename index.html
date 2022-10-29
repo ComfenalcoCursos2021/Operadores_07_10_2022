@@ -9,15 +9,15 @@
     <script src="main.js"></script>
 </head>
 <body>
-    <form id="MyData" method="POST" action="https://comfenalcocursos.000webhostapp.com/Operadores_07_10_2022/api.php">
-        <label>Ingrese el nombre *</label>
-        <input name="NOMBRE" type="text" pattern="[A-Z a-z]+" title="Ingrese solo letras" value="Miguel Angel Castro Escamilla" required>
-        <label>Ingrese el edad</label>
-        <input name="edad" type="text" pattern="[0-9]+" title="Ingrese solo numeros" value="24">
-        <label>Ingrese el altura *</label>
-        <input name="altura" type="text" pattern="[0-9.]+" title="Ingrese solo numeros" value="1.63" required>
-        <label>Ingrese el peso</label>
-        <input name="peso" type="text" pattern="[0-9.]+" title="Ingrese solo numeros" value="84">
+    <form id="MyData" method="POST" action="api.php">
+        <label>Ingrese el numero 1 *</label>
+        <input name="num1" type="text" pattern="[0-9]+" title="Ingrese solo numeros" value="24" required>
+        <input type="radio" name="tipo_datos_num_1" value="int" checked><label>Number</label>
+        <input type="radio" name="tipo_datos_num_1" value="string"><label>String</label>
+        <label>Ingrese el numero 2 *</label>
+        <input name="num2" type="text" pattern="[0-9]+" title="Ingrese solo numeros" value="24" required>
+        <input type="radio" name="tipo_datos_num_2" value="int" checked><label>Number</label>
+        <input type="radio" name="tipo_datos_num_2" value="string"><label>String</label>
         <input type="submit" value="Enviar datos">
     </form>
     <pre></pre>
