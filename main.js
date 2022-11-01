@@ -10,5 +10,15 @@ addEventListener("DOMContentLoaded", (e)=>{
         let peticion = await fetch(form.action, config);
         let data = await peticion.text();
         document.querySelector("pre").innerHTML = data;
+        data = JSON.parse(data);
+        document.querySelector("tbody tr:last-child").remove();
+        document.querySelector("tbody tr:last-child").insertAdjacentHTML("afterend", `
+            <tr class="resultadoPHP">
+                <td>${data.A}</td>
+                <td>${data.B}</td>
+                <td>${data.respuesta}</td>
+            </tr>
+        `);
+        
     })
 })

@@ -9,17 +9,53 @@
     <script src="main.js"></script>
 </head>
 <body>
-    <form id="MyData" method="POST" action="api.php">
-        <label>Ingrese el numero 1 *</label>
-        <input name="num1" type="text" pattern="[0-9]+" title="Ingrese solo numeros" value="24" required>
-        <input type="radio" name="tipo_datos_num_1" value="int" checked><label>Number</label>
-        <input type="radio" name="tipo_datos_num_1" value="string"><label>String</label>
-        <label>Ingrese el numero 2 *</label>
-        <input name="num2" type="text" pattern="[0-9]+" title="Ingrese solo numeros" value="24" required>
-        <input type="radio" name="tipo_datos_num_2" value="int" checked><label>Number</label>
-        <input type="radio" name="tipo_datos_num_2" value="string"><label>String</label>
+    <form id="MyData" method="POST" action="https://comfenalcocursos.000webhostapp.com/Operadores_07_10_2022/api.php">
+        <label>A *</label>
+        <input name="A" type="text" pattern="[a-z0-9]+" title="Ingrese solo numeros o letras en minuscula y sin espacios" value="true" required>
+        <input type="radio" name="tipo_datos_A" value="bool" checked><label>false true</label>
+        <input type="radio" name="tipo_datos_A" value="int"><label>0 1</label>
+        <label>B *</label>
+        <input name="B" type="text" pattern="[a-z0-9]+" title="Ingrese solo numeros o letras en minuscula y sin espacios" value="true" required>
+        <input type="radio" name="tipo_datos_B" value="bool" checked><label>false true</label>
+        <input type="radio" name="tipo_datos_B" value="int"><label>0 1</label>
         <input type="submit" value="Enviar datos">
     </form>
+    <table>
+        <thead>
+            <tr>
+                <th colspan="2">INPUT</th>
+                <th>OUTPUT</th>
+            </tr>
+            <tr>
+                <th>A</th>
+                <th>B</th>
+                <th>A AND B</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td>0</td>
+                <td>1</td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>0</td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+            </tr>
+            <tr></tr>
+        </tbody>
+    </table>
     <pre></pre>
 </body>
 </html>
